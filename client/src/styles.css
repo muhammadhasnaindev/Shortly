@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------- Theme tokens via CSS variables ---------------- */
+:root {
+  /* Light */
+  --bg: #F9FAFB;          /* gray-50 */
+  --surface: #FFFFFF;     /* card panels */
+  --surface-2: #F3F4F6;   /* inputs / subtle chips (gray-100) */
+  --border: #E5E7EB;      /* gray-200 */
+  --text: #111827;        /* gray-900 */
+  --muted: #6B7280;       /* gray-500 */
+
+  --primary: #10B981;       /* emerald-500 */
+  --primary-hover: #059669; /* emerald-600 */
+  --primary-light: #D1FAE5; /* emerald-100 */
+
+  --info: #3B82F6;
+  --warning: #F59E0B;
+  --error: #EF4444;
+
+  /* Charts */
+  --chart-primary: #10B981;
+  --chart-blue: #3B82F6;
+  --chart-amber: #F59E0B;
+  --chart-muted: #9CA3AF;
+
+  /* Focus ring */
+  --ring: rgba(16, 185, 129, 0.22);
+}
+
+html, body { overflow-x: hidden; }
+.page { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
+
+/* Dark mode tokens */
+.dark {
+  --bg: #0F172A;          /* slate-900 */
+  --surface: #111827;     /* gray-900 */
+  --surface-2: #1F2937;   /* gray-800 */
+  --border: #374151;      /* gray-700 */
+  --text: #F3F4F6;        /* gray-100 */
+  --muted: #CBD5E1;       /* slate-300 */
+
+  --primary: #34D399;       /* emerald-400 */
+  --primary-hover: #10B981; /* emerald-500 */
+  --primary-light: #064e3b22;
+
+  --chart-primary: #34D399;
+  --chart-blue: #60A5FA;
+  --chart-amber: #FBBF24;
+  --chart-muted: #9CA3AF;
+
+  --ring: rgba(52, 211, 153, 0.25);
+}
+
+/* ---------------- Globals ---------------- */
+html, body, #root { height: 100%; }
+body { background: var(--bg); color: var(--text); }
+
+/* Cards */
+.card {
+  @apply rounded-2xl shadow-soft border p-4;
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+/* Buttons */
+.btn-primary {
+  @apply rounded-full px-4 py-2 font-medium transition-colors duration-200;
+  background: var(--primary);
+  color: #fff;
+}
+.btn-primary:hover { background: var(--primary-hover); }
+
+/* Reusable INPUT style (works in both themes) */
+.input {
+  @apply w-full rounded-xl border px-3 py-2 outline-none transition-colors;
+  background: var(--surface-2);
+  border-color: var(--border);
+  color: var(--text);
+}
+.input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--ring);
+}
+.input[readonly] {
+  background: color-mix(in oklab, var(--surface-2) 85%, transparent 15%);
+}
+.input::placeholder {
+  color: var(--muted);
+  opacity: 0.9;
+}
+
+/* Textarea keeps same style */
+.textarea { @apply input; resize: vertical; }
+
+/* Input “surface” helper (legacy classname kept) */
+.input-surface {
+  @apply rounded-xl border px-3 py-1.5;
+  background: var(--surface-2);
+  border-color: var(--border);
+}
+
+/* Tables */
+.table-head {
+  background: color-mix(in oklab, var(--surface) 92%, var(--bg) 8%);
+}
+.table-head th { color: var(--text); opacity: 0.9; }
+.table-row { border-color: var(--border); }
+.table-row:hover {
+  background: color-mix(in oklab, var(--surface) 96%, var(--bg) 4%);
+}
+
+/* Utility */
+.text-muted { color: var(--muted); }
+
+/* Make sure modal content never gets global opacity applied */
+.dialog-panel { opacity: 1 !important; }
+
+/* Ensure icon buttons stay tappable but neat on tiny screens */
+.card .MuiIconButton-root { padding: 6px; }

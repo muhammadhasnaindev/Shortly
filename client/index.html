@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Shortly</title>
+
+    <!-- Default to DARK on first load; respect saved choice if any -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme'); // 'dark' | 'light' | null
+          var root = document.documentElement;
+          if (!saved || saved === 'dark') root.classList.add('dark');
+          else root.classList.remove('dark');
+        } catch (_) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
