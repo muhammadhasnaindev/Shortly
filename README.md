@@ -1,21 +1,4 @@
-# overwrite README.md with a clean, valid version
-cat > README.md <<'EOF'
-# 🔗 Shortly — Link Shortener & Analytics (MERN)
-
-A production-ready link shortener with authentication, custom domains, QR codes, password-protected links, click analytics (time/device/browser/country), saved views, CSV export, and shareable analytics links.
-
----
-
-## 🚀 Tech Stack
-
-| Layer      | Technologies |
-|-----------|--------------|
-| Frontend  | React 18, Vite, MUI, Tailwind, React Router, Recharts, Axios |
-| Backend   | Node.js, Express, MongoDB (Mongoose), JWT, BullMQ (optional), Nodemailer |
-| Dev Tools | Git, VS Code, NPM |
-
----
-
+````md
 ## 📦 Project Structure
 
 ```text
@@ -26,28 +9,38 @@ shortly/
 │  └─ src/             # components, pages, store, api
 └─ server/             # Express API
    └─ src/             # routes, models, middlewares, utils
-⚙️ Run Locally
-Backend
-bash
-Copy code
+````
+
+## ⚙️ Run Locally
+
+### Backend
+
+```bash
 cd server
 cp .env.example .env   # or create .env
 npm install
 npm run dev
 # API → http://localhost:5000
-Frontend
-bash
-Copy code
+```
+
+### Frontend
+
+```bash
 cd client
 cp .env.example .env   # or create client/.env
 npm install
 npm run dev
 # Web → http://localhost:5173
-client/.env
-ini
-Copy code
+```
+
+**client/.env**
+
+```ini
 VITE_API_BASE=http://localhost:5000
-🖼️ Screenshots
+```
+
+## 🖼️ Screenshots
+
 | Page              | Preview                                                       |
 | ----------------- | ------------------------------------------------------------- |
 | Dashboard (Light) | ![](client/public/screenshots/Analytics-Screenshot.png)       |
@@ -58,4 +51,6 @@ VITE_API_BASE=http://localhost:5000
 | Home (Light)      | ![](client/public/screenshots/home-Screenshot.png)            |
 | Login             | ![](client/public/screenshots/Login-Screenshot.png)           |
 | Recent Clicks     | ![](client/public/screenshots/Recent-Clicks-Screenshot.png)   |
-| EOF               |                                                               |
+
+````
+
