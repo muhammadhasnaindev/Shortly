@@ -1,3 +1,4 @@
+# overwrite README.md with a clean, valid version
 cat > README.md <<'EOF'
 # 🔗 Shortly — Link Shortener & Analytics (MERN)
 
@@ -27,23 +28,26 @@ shortly/
    └─ src/             # routes, models, middlewares, utils
 ⚙️ Run Locally
 Backend
+bash
+Copy code
 cd server
 cp .env.example .env   # or create .env
 npm install
 npm run dev
 # API → http://localhost:5000
-
 Frontend
+bash
+Copy code
 cd client
 cp .env.example .env   # or create client/.env
 npm install
 npm run dev
 # Web → http://localhost:5173
-
 client/.env
+ini
+Copy code
 VITE_API_BASE=http://localhost:5000
-
-🖼️ Screenshots 
+🖼️ Screenshots
 | Page              | Preview                                                       |
 | ----------------- | ------------------------------------------------------------- |
 | Dashboard (Light) | ![](client/public/screenshots/Analytics-Screenshot.png)       |
