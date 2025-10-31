@@ -1,5 +1,4 @@
-cat > README.md << 'EOF'
-# Shortly — Link Shortener & Analytics (MERN)
+# 🔗 Shortly — Link Shortener & Analytics (MERN)
 
 A production-ready link shortener with authentication, custom domains, QR codes, password-protected links, click analytics (time/device/browser/country), saved views, CSV export, and shareable analytics links.
 
