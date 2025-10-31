@@ -45,7 +45,7 @@ client/.env
 
 VITE_API_BASE=http://localhost:5000
 
-🖼️ Screenshots 
+🖼️ Screenshots
 | Page              | Preview                                                       |
 | ----------------- | ------------------------------------------------------------- |
 | Dashboard (Light) | ![](client/public/screenshots/Analytics-Screenshot.png)       |
