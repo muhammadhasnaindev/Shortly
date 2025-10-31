@@ -1,3 +1,4 @@
+# run this from the repo root
 cat > README.md <<'EOF'
 # 🔗 Shortly — Link Shortener & Analytics (MERN)
 
@@ -26,8 +27,7 @@ shortly/
 └─ server/             # Express API
    └─ src/             # routes, models, middlewares, utils
 ⚙️ Run Locally
-Backend
-cd server
+Backend cd server
 cp .env.example .env   # or create .env
 npm install
 npm run dev
@@ -38,14 +38,10 @@ cd client
 cp .env.example .env   # or create client/.env
 npm install
 npm run dev
-# Web → http://localhost:5173
-
-
+# Web → http://localhost:5173 
 client/.env
-
-VITE_API_BASE=http://localhost:5000
-
-🖼️ Screenshots
+VITE_API_BASE=http://localhost:5000 
+🖼️ Screenshots 
 | Page              | Preview                                                       |
 | ----------------- | ------------------------------------------------------------- |
 | Dashboard (Light) | ![](client/public/screenshots/Analytics-Screenshot.png)       |
@@ -57,3 +53,4 @@ VITE_API_BASE=http://localhost:5000
 | Login             | ![](client/public/screenshots/Login-Screenshot.png)           |
 | Recent Clicks     | ![](client/public/screenshots/Recent-Clicks-Screenshot.png)   |
 | EOF               |                                                               |
+
